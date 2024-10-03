@@ -12,4 +12,13 @@ h1,p,span{
   min-height: 100vh;
   width: 100%;
   background-color: #F9FAFD;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+@media only screen and (min-width: 780px){
+  #root{
+    align-items: center;
+  }
 }

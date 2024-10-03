@@ -1,0 +1,74 @@
+.post-div{
+    padding: 16px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 10px;
+}
+.post-div img{
+    height: 39px;
+}
+.main-part{
+    width: 100%;
+}
+.action-message-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.action-message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.action-message img{
+    margin-left: 15px;
+}
+.main-message{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: left;
+    color: #5E6778;
+}
+.name{
+    font-weight: 800;
+    color: #1C202B;
+    margin-right: 6px;
+}
+.post{
+    font-weight: 700;
+    margin-left: 6px;
+}
+.group{
+    font-weight: 700;
+    color: #0A327B;
+}
+.red-circle{
+    font-size: 8px;
+}
+.date{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: left;
+    color: #939CAD;
+    margin-top: 3px;
+}
+.direct-message{
+    width: 100%;
+    border: 1px solid #DDE7EE;
+    padding: 16px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+.direct-message h1{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: left;
+    color: #5E6778;
+}

@@ -1,0 +1,50 @@
+main{
+  width: 100%;
+  max-width: 730px;
+  background-color: #FFFFFF;
+  padding: 24px 16px 29px;
+  min-height: 100vh;
+}
+.notif-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.notification-numb{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.notification-font{
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 25.2px;
+  color: #1C202B;
+}
+.Nnumb{
+  padding: 0 11px;
+  height: 25px;
+  background-color: #0A327B;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#notif-number{
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20.16px;
+  color: white;
+}
+#mark-all{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.64px;
+  color: #5E6778;
+}
+#mark-all:hover{
+  cursor: pointer;
+  color: #0A327B;
+}
