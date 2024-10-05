@@ -8,9 +8,10 @@ export default function post({obj}){
                 <div className="action-message-div">
                     <div className="action-message">
                         <h1 className='main-message'><span className='name'>{obj.name}</span>{obj.action} 
-                        <span className='post'>{obj.post}</span><span className='group'>{obj.group}</span>
+                        {obj.post ? <span className='post'>{obj.post}</span> : ""}
+                        {obj.group ? <span className='group'>{obj.group}</span> : ""}
                         {obj.read ? "" : <span className='red-circle'>🔴</span>}</h1>
-                        {obj.picture ? <img src={obj.picture} alt="picture" /> : ""}
+                        {obj.picture ? <img src={obj.picture} alt="picture" className='picture'/> : ""}
                     </div>
                 </div>
                 <h1 className='date'>{obj.date}</h1>
