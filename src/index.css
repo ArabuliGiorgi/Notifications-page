@@ -5,7 +5,7 @@
   margin: 0;
   box-sizing: border-box;  
 }
-h1,p,span{
+h1,span{
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 #root{
@@ -20,5 +20,6 @@ h1,p,span{
 @media only screen and (min-width: 780px){
   #root{
     align-items: center;
+    padding: 63px 0 90px;
   }
 }

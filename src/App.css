@@ -27,7 +27,7 @@ main{
   padding: 0 11px;
   height: 25px;
   background-color: #0A327B;
-  border-radius: 5px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,4 +47,27 @@ main{
 #mark-all:hover{
   cursor: pointer;
   color: #0A327B;
+}
+
+@media only screen and (min-width: 780px){
+  main{
+    padding: 33px 30px 0;
+    min-height: fit-content;
+    border-radius: 15px;
+    box-shadow: 0px 20px 60px 0px #4961A80D;
+  }
+  .notif-header{
+    margin-bottom: 31px;
+  }
+  .notification-numb{
+    gap: 11px;
+  }
+  .notification-font{
+    font-size: 24px;
+    line-height: 30.24px;
+  }
+  #mark-all{
+    font-size: 16px;
+    line-height: 20.16px;
+  }
 }

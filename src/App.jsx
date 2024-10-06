@@ -1,4 +1,5 @@
 import './App.css'
+import { useEffect, useState } from 'react';
 import Post from './components/post/post'
 import Mark from '/images/avatar-mark-webber.webp'
 import Angela from '/images/avatar-angela-gray.webp'
@@ -10,7 +11,7 @@ import Anna from '/images/avatar-anna-kim.webp'
 import Chess from '/images/image-chess.webp'
 
 function App() {
-  let notifications = [
+  const [notifications, setNotifications] = useState([
     {
       id: 1,
       name: "Mark Webber",
@@ -95,7 +96,27 @@ function App() {
       picture: null,
       read: true
     }
-  ]
+  ]);
+  useEffect(() => {
+    const notification_number = document.getElementById('notif-number');
+    let sum = notifications.filter((object) => !object.read).length;
+    notification_number.textContent = sum;
+  }, [notifications]);
+
+  const markAllAsRead = () => {
+    const updatedNotifications = notifications.map((notification) => ({
+      ...notification,
+      read: true
+    }));
+    setNotifications(updatedNotifications);
+  };
+
+  const markAsRead = (id) => {
+    const updatedNotifications = notifications.map((notification) => 
+      notification.id === id ? { ...notification, read: true } : notification
+    );
+    setNotifications(updatedNotifications);
+  };
 
   return (
     <>
@@ -104,13 +125,13 @@ function App() {
           <div className="notification-numb">
             <h1 className='notification-font'>Notifications</h1>
             <div className="Nnumb">
-              <h1 id='notif-number'>3</h1>
+              <h1 id='notif-number'></h1>
             </div>
           </div>
-          <h1 id='mark-all'>Mark all as read</h1>
+          <h1 id='mark-all' onClick={markAllAsRead}>Mark all as read</h1>
         </div>
         {notifications.map((post) => (
-          <Post key={post.id} obj={post}/>
+          <Post key={post.id} obj={post} markAsRead={markAsRead}/>
         ))}
       </main>
     </>
