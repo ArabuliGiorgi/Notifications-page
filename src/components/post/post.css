@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 .red-circle{
-    font-size: 8px;
+    font-size: 0.5em;
     margin-left: 7px;
     position: relative;
     top: -0.2em;
