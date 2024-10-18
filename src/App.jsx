@@ -5,7 +5,7 @@ import data from './data.json'
 
 function App() {
   const [notifications, setNotifications] = useState(data);
-  const [notifNum, setNotifNum] = useState(notifications.filter((object) => !object.read).length);
+  const counter = notifications.filter((object) => !object.read).length;
 
   const markAllAsRead = () => {
     const updatedNotifications = notifications.map((notification) => ({
@@ -13,20 +13,16 @@ function App() {
       read: true
     }));
     setNotifications(updatedNotifications);
-    setNotifNum(0);
   };
 
   const markAsRead = (id) => {
-    let readNotif = false;
     const updatedNotifications = notifications.map((notification) => {
-      if(notification.id === id && !notification.read){
-        readNotif = true;
+      if(notification.id === id){
         return { ...notification, read: true };
       }
       return notification;
     });
     setNotifications(updatedNotifications);
-    setNotifNum(notifNum - (readNotif ? 1 : 0));
   };
 
   return (
@@ -36,7 +32,7 @@ function App() {
           <div className="notification-numb">
             <h1 className='notification-font'>Notifications</h1>
             <div className="Nnumb">
-              <h1 id='notif-number'>{notifNum}</h1>
+              <h1 id='notif-number'>{counter}</h1>
             </div>
           </div>
           <h1 id='mark-all' onClick={markAllAsRead}>Mark all as read</h1>
